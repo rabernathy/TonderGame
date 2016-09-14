@@ -1,0 +1,240 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background: #367c96;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5vh; }
+
+#game {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+#phone {
+  -webkit-border-radius: 2vh;
+  -moz-border-radius: 2vh;
+  -ms-border-radius: 2vh;
+  border-radius: 2vh;
+  background: white;
+  padding: 2vh 3.5vh;
+  margin: 3vh auto;
+  height: 90vh;
+  width: 48vh;
+  overflow: hidden;
+  position: relative; }
+
+h1 {
+  font-weight: bolder;
+  color: #ff6a6a;
+  text-align: center;
+  font-size: 2.25em;
+  margin-bottom: 1vh;
+  pointer-events: none; }
+
+#card-container {
+  position: relative;
+  height: 64vh;
+  width: 100%;
+  z-index: 1; }
+
+.card {
+  -webkit-border-radius: 1vh;
+  -moz-border-radius: 1vh;
+  -ms-border-radius: 1vh;
+  border-radius: 1vh;
+  border: 1px solid lightgray;
+  background: white;
+  overflow: hidden;
+  cursor: move;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 100%; }
+  .card.drag {
+    background: lightgray; }
+
+.card-portrait {
+  width: 100%; }
+  .card-portrait svg {
+    width: 48vh;
+    height: 53.568vh;
+    paddding: auto;
+    pointer-events: none; }
+    .card-portrait svg .like, .card-portrait svg .nope {
+      display: none; }
+
+.card-info {
+  pointer-events: none;
+  padding: 1.5vh 2vh; }
+  .card-info span {
+    display: block; }
+  .card-info .name {
+    font-size: 1.5em; }
+  .card-info .job {
+    color: gray;
+    padding: 0.5vh 0; }
+
+#action-buttons {
+  margin: 2vh auto;
+  width: 25vh;
+  height: 10vh;
+  position: relative; }
+  #action-buttons button {
+    height: 10vh;
+    width: 10vh;
+    -webkit-border-radius: 10vh;
+    -moz-border-radius: 10vh;
+    -ms-border-radius: 10vh;
+    border-radius: 10vh;
+    background-color: white;
+    border: 0.75vh solid #e2e2e2;
+    font-size: 2em;
+    font-weight: bolder;
+    position: absolute;
+    cursor: pointer; }
+    #action-buttons button:focus {
+      outline: 0; }
+    #action-buttons button svg {
+      height: 9vh;
+      width: 5vh; }
+  #action-buttons #yes-button {
+    right: 0; }
+
+#meter {
+  -webkit-border-radius: 1vh;
+  -moz-border-radius: 1vh;
+  -ms-border-radius: 1vh;
+  border-radius: 1vh;
+  background: #e2e2e2;
+  padding: 0.75vh;
+  padding-right: 0;
+  height: 2.98125vh; }
+  #meter div {
+    background-color: lightgray;
+    width: 3.975vh;
+    height: 2.98125vh;
+    margin-right: 0.75vh;
+    float: left; }
+    #meter div:first-child {
+      border-radius: 0.75vh 0 0 0.75vh; }
+    #meter div:last-child {
+      border-radius: 0 0.75vh 0.75vh 0; }
+    #meter div.good {
+      background-color: #4ccc92; }
+    #meter div.bad {
+      background-color: #ff6a6a; }
+
+.popup {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  padding: 13vh 3vh; }
+  .popup .dialog {
+    -webkit-border-radius: 2vh;
+    -moz-border-radius: 2vh;
+    -ms-border-radius: 2vh;
+    border-radius: 2vh;
+    background: white;
+    padding: 3vh; }
+  .popup .liked {
+    color: #4ccc92; }
+  .popup .glitched, .popup #glitchFactor {
+    color: #ff6a6a; }
+  .popup h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25em; }
+  .popup button {
+    -webkit-border-radius: 2vh;
+    -moz-border-radius: 2vh;
+    -ms-border-radius: 2vh;
+    border-radius: 2vh;
+    margin: 1vh auto;
+    background-color: #ff6a6a;
+    border: 0;
+    padding: 1vh 3vh;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer; }
+    .popup button:focus {
+      outline: 0; }
+  .popup p {
+    margin: 1.5vh 0;
+    line-height: 1.1; }
+
+em {
+  font-weight: bold; }
+
+#info-button {
+  height: 5vh;
+  width: 5vh;
+  -webkit-border-radius: 3vh;
+  -moz-border-radius: 3vh;
+  -ms-border-radius: 3vh;
+  border-radius: 3vh;
+  background-color: white;
+  border: 0.75vh solid #e2e2e2;
+  font-size: 1.25em;
+  font-weight: bolder;
+  color: gray;
+  position: absolute;
+  right: 3vh;
+  top: 2vh;
+  cursor: pointer; }
+  #info-button:focus {
+    outline: 0; }
+
+/*# sourceMappingURL=style.css.map */
